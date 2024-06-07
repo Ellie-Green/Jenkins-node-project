@@ -14,7 +14,7 @@ pipeline{
         }
         stage("run"){
             steps{
-                sh "docker run -d --name node-project --network new-network node-image"
+                sh "docker run -d -p 80:5000 --name node-project --network new-network node-image"
                 }
         }
     }
